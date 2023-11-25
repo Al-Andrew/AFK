@@ -12,5 +12,6 @@ set_languages("c++20")
 target("AFK")
     set_kind("static")
     add_files("src/*.cpp")
+    add_headerfiles("include/**.hpp")
 
     add_includedirs("include", {public = true})
