@@ -4,7 +4,7 @@ package("AFK")
 
     add_urls("https://github.com/Al-Andrew/AFK/archive/$(version).tar.gz")
 
-    add_versions("v0.0.1", "998d4f115154007fdc08057e9d86750c0235d6b5")
+    add_versions("v0.0.1", "5186912284926bf05f5fe76dcba3b034cc8e673c")
 
     on_install("windows", function(package)
         import("package.tools.xmake").install(package)
