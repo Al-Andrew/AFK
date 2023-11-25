@@ -1,12 +1,18 @@
 package("AFK")
-    set_homepage("https://github.com/Al-Andrew/AFK")
     set_description("Andrew's field kit. C++ utilities library.")
 
-    add_urls("https://github.com/Al-Andrew/AFK/archive/$(version).tar.gz")
+    add_urls("https://github.com/Al-Andrew/AFK.git")
+    add_versions("0.0.1", "74e1bee71ec28c2f4f3ec4b298c0811bfc1bdb09")
 
-    add_versions("v0.0.1", "5186912284926bf05f5fe76dcba3b034cc8e673c")
-
-    on_install("windows", function(package)
-        import("package.tools.xmake").install(package)
+    on_install(function (package)
+        local configs = {}
+        if package:config("shared") then
+            configs.kind = "shared"
+        end
+        import("package.tools.xmake").install(package, configs)
     end)
-package_end()
+
+    on_test(function (package)
+        -- TODO check includes and interfaces
+        -- assert(package:has_cfuncs("foo", {includes = "foo.h"})
+    end)
