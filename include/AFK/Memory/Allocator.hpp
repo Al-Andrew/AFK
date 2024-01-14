@@ -1,0 +1,6 @@
+#ifndef AFK_MEMORY_ALLOCATOR_H
+#define AFK_MEMORY_ALLOCATOR_H
+
+namespace AFK::Memory {}
+
+#endif // AFK_MEMORY_ALLOCATOR_H

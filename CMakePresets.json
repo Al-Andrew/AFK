@@ -1,0 +1,29 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 28,
+    "patch": 1
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "description": "Default preset",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "description": "Default build preset",
+      "hidden": false,
+      "configurePreset": "default",
+      "jobs": 8
+    }
+  ]
+}
